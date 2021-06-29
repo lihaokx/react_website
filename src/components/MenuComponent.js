@@ -1,14 +1,13 @@
 
 import React, { Component, useState } from 'react';
 import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle } from 'reactstrap';
-
-
+import Dishdetail from './DishdetailComponent';
 
 const Menu = (props) => {
     const menufile = props.dishes;
     const [isImgSelected, setIsImgSelected] =useState(false);
     const [selectedDish, setSelectedDish] = useState("");
-    console.log(menufile);
+
 
     const onDishSelected = (dish) =>{
       if(dish){
@@ -17,30 +16,7 @@ const Menu = (props) => {
       }
     }
 
-    const renderDish =(isImgSelected) =>{
-      if(isImgSelected){        
-        return(
-          <Card>
-            <CardImg top src={selectedDish.image} alt={selectedDish.name} />
-            <CardBody>
-              <CardTitle>{selectedDish.name}       
-              </CardTitle>
-              <CardText>{selectedDish.description}</CardText>
-            </CardBody>
-          </Card>
-        )            
-      }
-      else{
-        return(
-          <div>
-            <p></p>
-          </div>
-        )
-      }
-    }
-
     const menu = menufile.map((dish) => {
-        console.log(dish.image);
         return (
           <div key={dish.id} className="col-12 col-md-5 m-1">
               <Card key={dish.id} 
@@ -53,15 +29,15 @@ const Menu = (props) => {
           </div>
         );
     });
-    
+
     return (
         <div className="container">
           <div className="row"> 
             {menu}
           </div>
-          <div className="row"> 
-            {renderDish(isImgSelected)}
-          </div>
+          {/* <div className="row">  */}
+            <Dishdetail isImgSelected={isImgSelected} selectedDish={selectedDish} />
+          {/* </div> */}
         </div>
       );
 }
