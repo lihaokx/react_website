@@ -1,8 +1,8 @@
 
-import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardImg,  CardText, CardTitle } from 'reactstrap';
 const Dishdetail = (props) => {
     const renderComments = ()=>{
-        const comments = props.selectedDish.comments;
+        const comments = props.dish.comments;
             if(comments){
             return (
                 <div>
@@ -11,7 +11,7 @@ const Dishdetail = (props) => {
                             <li key={element.id}>
                                 <div  key={element.id}>
                                     <p>{element.comment}</p>
-                                    <p>-- {element.author} {element.date}</p>
+                                    <p>-- {element.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(element.date)))}</p>
                                 </div>
                             </li>
                         ))}
@@ -31,11 +31,11 @@ const Dishdetail = (props) => {
             <div className="row"> 
                 <div className="col-12 col-md-5 m-1">
                     <Card>
-                        <CardImg top src={props.selectedDish.image} alt={props.selectedDish.name} />
+                        <CardImg top src={props.dish.image} alt={props.dish.name} />
                         <CardBody>
-                            <CardTitle>{props.selectedDish.name}       
+                            <CardTitle>{props.dish.name}       
                             </CardTitle>
-                            <CardText>{props.selectedDish.description}</CardText>
+                            <CardText>{props.dish.description}</CardText>
                         </CardBody>
                     </Card> 
                 </div>
