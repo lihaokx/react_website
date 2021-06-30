@@ -2,7 +2,7 @@
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import { useState } from 'react';
-import Dishdetail from './DishdetailComponent';
+import  Dishdetail  from './DishdetailComponent';
 import {DISHES} from '../shared/dishes';
 
 const Main = () => {
@@ -25,7 +25,8 @@ const Main = () => {
           <div className="container">
           <Menu dishes={DISHES}  clickon={(dishId)=>onDishSelected(dishId)} />
           <Dishdetail  dish={DISHES.filter((dish) =>  dish.id === selectedDish)[0]} isImgSelected={isImgSelected}/>
-          </div>
+ 
+              </div>
         </div>
     );
 }

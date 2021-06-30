@@ -1,9 +1,9 @@
 
 import { Card, CardBody, CardImg,  CardText, CardTitle } from 'reactstrap';
-const Dishdetail = (props) => {
-    const renderComments = ()=>{
-        const comments = props.dish.comments;
-            if(comments){
+
+const RenderComments = (props) => {
+    const comments = props.comments;
+        if(comments){
             return (
                 <div>
                     <ul>
@@ -18,30 +18,38 @@ const Dishdetail = (props) => {
                     </ul>
                 </div>
             )}
-            else{
-                return(
-                    <div></div>
-                )
-            }
+        else{
+            return(
+                <div></div>
+            )
         }
+}
+
+const RenderDish = (props) => {
+    return ( 
+        <Card>
+        <CardImg top src={props.dish.image} alt={props.dish.name} />
+        <CardBody>
+            <CardTitle>{props.dish.name}       
+            </CardTitle>
+            <CardText>{props.dish.description}</CardText>
+        </CardBody>
+        </Card> 
+     );
+}
  
+
+const Dishdetail = (props) => { 
     if(props.isImgSelected){  
         // console.log(props.selectedDish.comments[0]);
         return(
             <div className="row"> 
                 <div className="col-12 col-md-5 m-1">
-                    <Card>
-                        <CardImg top src={props.dish.image} alt={props.dish.name} />
-                        <CardBody>
-                            <CardTitle>{props.dish.name}       
-                            </CardTitle>
-                            <CardText>{props.dish.description}</CardText>
-                        </CardBody>
-                    </Card> 
+                    <RenderDish dish={props.dish}/>
                 </div>
                 <div className="col-12 col-md-5 m-1">                
                     <h4>Comments</h4>                    
-                    {renderComments()}
+                    <RenderComments comments = {props.dish.comments}/>
                 </div>
             </div>
         )   
@@ -55,3 +63,4 @@ const Dishdetail = (props) => {
       }         
 }
 export default Dishdetail;
+ 
