@@ -1,9 +1,9 @@
- 
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import { useState } from 'react';
 import  Dishdetail  from './DishdetailComponent';
 import {DISHES} from '../shared/dishes';
+
 
 const Main = () => {
     const [isImgSelected, setIsImgSelected] =useState(false);
@@ -22,10 +22,11 @@ const Main = () => {
               <NavbarBrand href="/"> Ristorante Con Fusion </NavbarBrand>
             </div>
           </Navbar>
+          {/* <Header/> */}
           <div className="container">
           <Menu dishes={DISHES}  clickon={(dishId)=>onDishSelected(dishId)} />
           <Dishdetail  dish={DISHES.filter((dish) =>  dish.id === selectedDish)[0]} isImgSelected={isImgSelected}/>
- 
+          {/* <Footer/> */}
               </div>
         </div>
     );

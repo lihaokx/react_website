@@ -28,7 +28,7 @@ const RenderComments = (props) => {
 const RenderDish = (props) => {
     return ( 
         <Card>
-        <CardImg top src={props.dish.image} alt={props.dish.name} />
+        <CardImg top src={process.env.PUBLIC_URL +'/'+ props.dish.image} alt={props.dish.name} />
         <CardBody>
             <CardTitle>{props.dish.name}       
             </CardTitle>
