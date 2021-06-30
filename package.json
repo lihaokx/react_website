@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "yh-pages -d build_gh"
+    "deploy": "yh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
