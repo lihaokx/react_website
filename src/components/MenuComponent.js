@@ -8,7 +8,6 @@ const RenderMenuItem = (props) => {
     <Card key={props.dish.id} 
     onClick={() => props.clickon(props.dish.id)}>
     <CardImg width="100%" src={process.env.PUBLIC_URL +'/' +imgLoc}  alt={props.dish.name} />
-    <p>{imgLoc}</p>
     <CardImgOverlay>
     <CardTitle>{props.dish.name} </CardTitle>
     </CardImgOverlay>
