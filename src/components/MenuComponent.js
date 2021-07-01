@@ -21,7 +21,7 @@ const Menu = (props) => {
  
     const menu = menufile.map((dish) => {
         return (
-          <div key={dish.id} className="col-12 col-md-5 m-1">
+          <div key={dish.id} className="col-xs-12 col-md-5 m-4">
             <RenderMenuItem dish={dish} clickon={() => props.clickon(dish.id)}/>
           </div>
         );
