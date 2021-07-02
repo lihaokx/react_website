@@ -1,5 +1,8 @@
 
-import { Card, CardBody, CardImg,  CardText, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 
 const RenderComments = (props) => {
     const comments = props.comments;
@@ -40,16 +43,33 @@ const RenderDish = (props) => {
  
 
 const Dishdetail = (props) => { 
-    if(props.isImgSelected){  
+ 
+    console.log("dish details: props" );
+    console.log( props);
+    console.log("dish details: props.match" );
+
+    if(props.dish){  
         // console.log(props.selectedDish.comments[0]);
         return(
-            <div className="row"> 
-                <div className="col-12 col-md-5 m-1">
-                    <RenderDish dish={props.dish}/>
+            <div className="container">
+                <div className="row">
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <div className="col-12">
+                        <h3>{props.dish.name}</h3>
+                        <hr />
+                    </div>                
                 </div>
-                <div className="col-12 col-md-5 m-1">                
-                    <h4>Comments</h4>                    
-                    <RenderComments comments = {props.dish.comments}/>
+                <div className="row"> 
+                    <div className="col-12 col-md-5 m-1">
+                        <RenderDish dish={props.dish}/>
+                    </div>
+                    <div className="col-12 col-md-5 m-1">                
+                        <h4>Comments</h4>                    
+                        <RenderComments comments = {props.comments}/>
+                    </div>
                 </div>
             </div>
         )   

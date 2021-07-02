@@ -12,7 +12,9 @@ import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
 
-const HomePage = () => {
+const HomePage = (props) => {
+  console.log("Home component: props" );
+  console.log(props);
   return (  
     <Home  dish={DISHES.filter((dish) => dish.featured)[0]}
     promotion={PROMOTIONS.filter((promo) => promo.featured)[0]}
@@ -30,6 +32,14 @@ const Main = () => {
         setSelectedDish(dishId);
       }
     }
+    const DishWithId = ({match}) => {
+      console.log("dish details: match" );
+      console.log(match);
+      return(
+          <Dishdetail dish={DISHES.filter((dish) => dish.id === parseInt( match.params.dishId,10))[0]} 
+            comments={COMMENTS.filter((comment) => comment.dishId === parseInt( match.params.dishId,10))} />
+      );
+    };
 
     return (
         <div className="App">
@@ -38,7 +48,8 @@ const Main = () => {
 
           <Switch>
               <Route path='/home' component={HomePage} />
-              <Route exact path='/menu' component={() => <Menu dishes={DISHES} clickon={(dishId)=>onDishSelected(dishId)} />} />
+              <Route exact path='/menu' component={() => <Menu dishes={DISHES} clickon={(dishId)=>onDishSelected(dishId)} /> } />
+              <Route path='/menu/:dishId' component={(match) => DishWithId(match)} />
               <Route exact path='/contactus' component={Contact} /> 
               <Redirect to="/home" />
           </Switch>
