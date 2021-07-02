@@ -6,11 +6,13 @@ import {DISHES} from '../shared/dishes';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
+import About from './AboutComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Contact from './ContactComponent';
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
+
 
 const HomePage = (props) => {
   console.log("Home component: props" );
@@ -50,6 +52,7 @@ const Main = () => {
               <Route path='/home' component={HomePage} />
               <Route exact path='/menu' component={() => <Menu dishes={DISHES} clickon={(dishId)=>onDishSelected(dishId)} /> } />
               <Route path='/menu/:dishId' component={(match) => DishWithId(match)} />
+              <Route path='/aboutus' component={() => <About leaders={LEADERS} /> }/>
               <Route exact path='/contactus' component={Contact} /> 
               <Redirect to="/home" />
           </Switch>
