@@ -46,7 +46,7 @@ const Dishdetail = (props) => {
  
     console.log("dish details: props" );
     console.log( props);
-    console.log("dish details: props.match" );
+ 
 
     if(props.dish){  
         // console.log(props.selectedDish.comments[0]);
