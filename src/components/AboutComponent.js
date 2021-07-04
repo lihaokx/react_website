@@ -18,7 +18,6 @@ const RenderLeader = (props) => {
             </Media>
         </Media>
     </div>
-
     );
 }  
 
@@ -26,7 +25,9 @@ function About(props) {
 
     const leaders = props.leaders.map((leader) => {
         return (
+        <div key={leader.id} className="col-12 mt-5"> 
             <RenderLeader leader ={leader}/>
+        </div>
         );
     }) ;
 

@@ -26,8 +26,8 @@ const Header = () => {
     function handleLogin(event) {
         toggleModal();
         console.log("event: "+ event);
-        alert("Username: " + namePassword.username.value  + ";  Password: " + namePassword.password.value 
-            + ";  Remember: " + namePassword.remember.checked );
+        // alert("Username: " + namePassword.username.value  + ";  Password: " + namePassword.password.value 
+        //     + ";  Remember: " + namePassword.remember.checked );
  
         event.preventDefault();
     }
