@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback } from 'reactstrap';
 
+const test2 =() =>{
+    console.log('test2');
+}
+
+test2();
 
 function Contact(props) {
     // console.log("Contact component: props" );
@@ -42,7 +47,11 @@ function Contact(props) {
         // alert('after State is: ' + JSON.stringify(form));
         event.preventDefault();
     }
+    const test =() =>{
+        console.log('test');
+    }
 
+    test();
     function validate(firstname, lastname, telnum, email) {
         const errors={
             firstname: '',
@@ -50,6 +59,7 @@ function Contact(props) {
             telnum: '',
             email: '' 
         };
+        console.log('validate form');
         if(form.touched.firstname && firstname.length<3){
             errors.firstname="First Name should be >= 3 characters!";
         }
@@ -127,12 +137,12 @@ function Contact(props) {
                                     <Input type="text" id="firstname" name="firstname"
                                         placeholder="First Name"
                                         value={ form.firstname}
-                                        valid={errors.firstname === ''}
-                                        invalid={errors.firstname !== ''}
+                                        // valid={errors.firstname === ''}
+                                        // invalid={errors.firstname !== ''}
                                         onBlur ={ handleBlur("firstname")}
                                         onChange={handleInputChange}
                                          />
-                                    <FormFeedback>{errors.firstname}</FormFeedback>
+                                    {/* <FormFeedback>{errors.firstname}</FormFeedback> */}
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -141,11 +151,11 @@ function Contact(props) {
                                     <Input type="text" id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         value={ form.lastname}
-                                        valid={errors.lastname === ''}
-                                        invalid={errors.lastname !== ''}
+                                        // valid={errors.lastname === ''}
+                                        // invalid={errors.lastname !== ''}
                                         onBlur ={ handleBlur("lastname")}
                                         onChange={handleInputChange} />
-                                    <FormFeedback>{errors.lastname}</FormFeedback>
+                                    {/* <FormFeedback>{errors.lastname}</FormFeedback> */}
                                 </Col>                        
                             </FormGroup>
                             <FormGroup row>
@@ -154,11 +164,11 @@ function Contact(props) {
                                     <Input type="tel" id="telnum" name="telnum"
                                         placeholder="Tel. number"
                                         value={form.telnum}
-                                        valid={errors.telnum === ''}
-                                        invalid={errors.telnum !== ''}
+                                        // valid={errors.telnum === ''}
+                                        // invalid={errors.telnum !== ''}
                                         onBlur = {handleBlur("telnum")}
                                         onChange={handleInputChange} />
-                                    <FormFeedback>{errors.telnum}</FormFeedback>
+                                    {/* <FormFeedback>{errors.telnum}</FormFeedback> */}
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -167,11 +177,11 @@ function Contact(props) {
                                     <Input type="email" id="email" name="email"
                                         placeholder="Email"
                                         value={ form.email}
-                                        valid={errors.email === ''}
-                                        invalid={errors.email !== ''}
+                                        // valid={errors.email === ''}
+                                        // invalid={errors.email !== ''}
                                         onBlur = {handleBlur("email")}
                                         onChange={handleInputChange} />
-                                    <FormFeedback>{errors.email}</FormFeedback>
+                                    {/* <FormFeedback>{errors.email}</FormFeedback> */}
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
