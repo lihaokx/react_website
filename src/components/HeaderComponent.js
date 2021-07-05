@@ -25,15 +25,15 @@ const Header = () => {
 
     function handleLogin(event) {
         toggleModal();
-        console.log("event: "+ event);
+        // console.log("event: "+ event);
         // alert("Username: " + namePassword.username.value  + ";  Password: " + namePassword.password.value 
         //     + ";  Remember: " + namePassword.remember.checked );
  
         event.preventDefault();
     }
 
-    console.log("isModalOpen:  "+isModalOpen);
-    console.log("isNavOpen:  "+isNavOpen);
+    // console.log("isModalOpen:  "+isModalOpen);
+    // console.log("isNavOpen:  "+isNavOpen);
     return(
     <React.Fragment>
                 <Navbar dark expand="md">

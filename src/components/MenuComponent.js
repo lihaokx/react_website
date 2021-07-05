@@ -19,8 +19,8 @@ const RenderMenuItem = (props) => {
 
 
 const Menu = (props) => {
-  console.log("Menu component: props" );
-  console.log(props.match);
+  // console.log("Menu component: props" );
+  // console.log(props.match);
     const menufile = props.dishes;
  
     const menu = menufile.map((dish) => {

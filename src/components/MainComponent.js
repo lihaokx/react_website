@@ -26,8 +26,8 @@ const mapStateToProps = state => {
 }
 
 const Main = (props) => {
-  console.log("props of main");
-  console.log(props);
+  // console.log("props of main");
+  // console.log(props);
     const [isImgSelected, setIsImgSelected] =useState(false);
     const [selectedDish, setSelectedDish] = useState("");
     const onDishSelected = (dishId) =>{

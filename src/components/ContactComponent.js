@@ -26,35 +26,9 @@ const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val
 
 function Contact(props) {
     // console.log("Contact component: props" );
-    const [form, setForm] = useState({
-        firstname: '',
-        lastname: '',
-        telnum: '',
-        email: '',
-        agree: false,
-        contactType: 'Tel.',
-        message: '',
-        touched: {
-            firstname: false,
-            lastname: false,
-            telnum: false,
-            email: false
-        }
-    });
-
-    const handleInputChange = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-        setForm({
-            ...form,
-        [name]: value
-        });
-
-    }
-
+ 
     function handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
+        // console.log('Current State is: ' + JSON.stringify(values));
         // alert('Current State is: ' + JSON.stringify(values));
         // event.preventDefault();
     }
