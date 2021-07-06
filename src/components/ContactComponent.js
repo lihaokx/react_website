@@ -25,7 +25,7 @@ const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val
 
 
 function Contact(props) {
-    // console.log("Contact component: props" );
+    console.log("Contact component: props", props );
  
     function handleSubmit(values) {
         // console.log('Current State is: ' + JSON.stringify(values));

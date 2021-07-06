@@ -5,7 +5,7 @@ import { Card, CardImg, CardText, CardBody,
   
 import { Link } from 'react-router-dom';
 import React from 'react';
-
+import { Loading } from './LoadingComponent';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import reactDom from 'react-dom';
 
@@ -157,7 +157,26 @@ const CommentForm  = (props) => {
 const Dishdetail = (props) => { 
     // console.log("dish details: props" );
     // console.log( props);
-    if(props.dish){  
+
+    if (props.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.errMess) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    }
+    else if (props.dish != null) {  
         // console.log(props.selectedDish.comments[0]);
         return(
             <div className="container">
