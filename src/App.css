@@ -38,7 +38,8 @@ address{
 
 .headerNavBar{
     background: #0a66c2 ;
-    height:4rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
 }
     
 .nav-link{

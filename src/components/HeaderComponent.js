@@ -39,15 +39,15 @@ const Header = () => {
     // console.log("isNavOpen:  "+isNavOpen);
     return(
     <React.Fragment>
-                <Navbar className="headerNavBar" expand="md">
+                <Navbar dark className="headerNavBar" expand="md">
                     <div className="container">
                         <NavbarToggler onClick={() => toggleNav()} />
-                        <NavbarBrand className="mr-auto" href="/"><img src={process.env.PUBLIC_URL +'/assets/images/logo.svg'} height="60" width="60" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src={process.env.PUBLIC_URL +'/assets/images/logo.svg'} height="50" width="50" alt='Ristorante Con Fusion' /></NavbarBrand>
                         <Collapse isOpen={isNavOpen} navbar className="row callapseNav">
 
                             <Nav navbar className ="col-md-7 row">
 
-                            <NavItem className="col-3">
+                            <NavItem className="col-md-3">
                                 <NavLink className="normal"  activeClassName="active"  to='/home'>
                                     {/* <span className="fa fa-home fa-lg"></span>  */}
                                     <IconContext.Provider value={{ color: "#ffffff", size: "2em", className: "global-class-name" }}>
@@ -57,7 +57,7 @@ const Header = () => {
                                     </NavLink>
                             </NavItem>
 
-                            <NavItem className="col-3">
+                            <NavItem className="col-md-3">
                                 <NavLink  className="normal"  activeClassName="active" to='/aboutus'>
                                     <IconContext.Provider value={{ color: "#ffffff", size: "2em", className: "global-class-name" }}>
                                         <AiFillInfoCircle/>
@@ -66,7 +66,7 @@ const Header = () => {
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="col-3">
+                            <NavItem className="col-md-3">
                                 <NavLink className="normal"  activeClassName="active"  to='/menu'>
                                     <IconContext.Provider value={{ color: "#ffffff", size: "2em", className: "global-class-name" }}>
                                         <AiOutlineMenuUnfold/>
@@ -77,7 +77,7 @@ const Header = () => {
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="col-3">
+                            <NavItem className="col-md-3">
                                 <NavLink  className="normal"  activeClassName="active" to='/contactus'>
                                     <IconContext.Provider value={{ color: "#ffffff", size: "2em", className: "global-class-name" }}>
                                         <AiOutlineContacts/>
