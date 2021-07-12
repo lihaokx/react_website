@@ -50,7 +50,6 @@ const Main = (props) => {
       props.fetchDishes();
     }, []);
       
- 
 
     const HomePage = () => {
       console.log("Home component: props" );
