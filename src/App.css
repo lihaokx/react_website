@@ -18,9 +18,13 @@
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
-    background: #9575CD ;
-    color:floralwhite;
+    background: #ffffff ;
+    color:#0f0f0f;
+
 }
+a{ text-decoration:none;
+    color:black;
+  }
 
 address{
     font-size:80%;
@@ -32,3 +36,33 @@ address{
     background-color: #512DA8;
 }
 
+.headerNavBar{
+    background: #0a66c2 ;
+    height:4rem;
+}
+    
+.nav-link{
+    color: #ffffff;
+
+}
+.normal:hover{
+    color: #fdfd07;
+}
+
+.loginBtn{
+    color: #ffffff;
+    border:none;
+}
+
+.normal{
+    color: #ffffff;
+}
+
+.active{
+    font-weight: bold;
+    color: #f3e2e2;
+}
+
+.callapseNav{
+    margin-left: 3rem;
+}

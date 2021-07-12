@@ -4,7 +4,7 @@ import { useState , useEffect} from 'react';
 import  Dishdetail  from './DishdetailComponent';
 // import {DISHES} from '../shared/dishes';
 import Header from './HeaderComponent';
-import Footer from './FooterComponent';
+import Footer from './Footer';
 import Home from './HomeComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
@@ -93,8 +93,9 @@ const Main = (props) => {
 
           {/* <Menu dishes={DISHES}  clickon={(dishId)=>onDishSelected(dishId)} /> */}
           {/* <Dishdetail  dish={DISHES.filter((dish) =>  dish.id === selectedDish)[0]} isImgSelected={isImgSelected}/> */}
-          <Footer/>
+          
           </div>
+          <Footer/>
         </div>
     );
 }
