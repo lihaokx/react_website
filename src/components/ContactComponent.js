@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
+import MapContainer from './MapComponent';
 import { Breadcrumb, BreadcrumbItem,
     Button, Row, Col, Label } from 'reactstrap';
 // import { Control, LocalForm, Errors } from 'react-redux-form';
@@ -19,6 +20,11 @@ const minLength = (len) =>{
         }
 }
 
+const style = {
+    width: '100px',
+    height: '100px',
+     position: 'relative'
+  }
 const isNumber = (val) => !isNaN(Number(val));
 
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
@@ -51,30 +57,25 @@ function Contact(props) {
             </div>
 
             <div className="row row-content">
-                <div className="col-12">
+
+                <div className="col-12 col-sm-4 ">
                 <h3>Location Information</h3>
-                </div>
-                <div className="col-12 col-sm-4 offset-sm-1">
                         <h5>Our Address</h5>
-                        <address>
-                        121, Clear Water Bay Road<br />
-                        Clear Water Bay, Kowloon<br />
-                        HONG KONG<br />
+                        <address className="addressFont">
+                        453 West 12th Ave <br/>
+                        Vancouver, BC <br/>
+                        V5Y 1V4<br />
+                        Canada<br />
                         <i className="fa fa-phone"></i>: +852 1234 5678<br />
                         <i className="fa fa-fax"></i>: +852 8765 4321<br />
                         <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
                         </address>
                 </div>
-                <div className="col-12 col-sm-6 offset-sm-1">
+                <div className="col-12 col-sm-7  ">
                     <h5>Map of our Location</h5>
+                    <MapContainer className="gglMap"/>
                 </div>
-                <div className="col-12 col-sm-11 offset-sm-1">
-                    <div className="btn-group" role="group">
-                        <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
-                        <a role="button" className="btn btn-info"><i className="fa fa-skype"></i> Skype</a>
-                        <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
-                    </div>
-                </div>
+               
             </div>
                 <div className="row row-content">
                    <div className="col-12">

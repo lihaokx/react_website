@@ -67,3 +67,12 @@ address{
 .callapseNav{
     margin-left: 3rem;
 }
+
+.addressFont{
+    font-size: 1.2rem;
+}
+
+.gglMap{
+    height: 100%;
+    width: 100%;
+}
