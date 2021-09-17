@@ -6,7 +6,7 @@ import { Loading } from './LoadingComponent';
 
 const RenderMenuItem = (props) => {
   const imgLoc = props.dish.image;
-  console.log("RenderMenuItem props: ", props);
+  // console.log("RenderMenuItem props: ", props);
   return ( 
     <Card>
       <Link to={`/menu/${props.dish.id}`}>
@@ -20,7 +20,7 @@ const RenderMenuItem = (props) => {
 }
 
 const Rendermenu = (props) => {
-  console.log("Rendermenu props: ", props);
+  // console.log("Rendermenu props: ", props);
   if (props.dishes.isLoading) {
     return(
         <div className="container">
@@ -42,7 +42,7 @@ const Rendermenu = (props) => {
       );
   } 
   else{
-    console.log("Rendermenu props.dishes.isLoading ", props.dishes.isLoading);
+    // console.log("Rendermenu props.dishes.isLoading ", props.dishes.isLoading);
     return (
       props.dishes.dishes.map( (dish) => 
         <div key={dish.id} className="col-xs-12 col-md-5 m-4"> 
@@ -56,9 +56,9 @@ const Rendermenu = (props) => {
 
 
 const Menu = (props) => {
-  console.log("Menu component: props" );
-  console.log(props);
-    const menufile = props.dishes.dishes;
+  // console.log("Menu component: props" );
+  // console.log(props);
+    // const menufile = props.dishes.dishes;
     
     return (
       <div className="container">

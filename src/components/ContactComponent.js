@@ -1,12 +1,12 @@
  
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import MapContainer from './MapComponent';
 import { Breadcrumb, BreadcrumbItem,
     Button, Row, Col, Label } from 'reactstrap';
 // import { Control, LocalForm, Errors } from 'react-redux-form';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
 const required = (val) => val && val.length;
 const maxLength = (len) =>{
     return function  manLength (val) {
@@ -20,18 +20,18 @@ const minLength = (len) =>{
         }
 }
 
-const style = {
-    width: '100px',
-    height: '100px',
-     position: 'relative'
-  }
+// const style = {
+//     width: '100px',
+//     height: '100px',
+//      position: 'relative'
+//   }
 const isNumber = (val) => !isNaN(Number(val));
 
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 
 function Contact(props) {
-    console.log("Contact component: props", props );
+    // console.log("Contact component: props", props );
  
     function handleSubmit(values) {
         // console.log('Current State is: ' + JSON.stringify(values));

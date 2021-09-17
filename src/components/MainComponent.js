@@ -35,8 +35,8 @@ const mapDispatchToProps = dispatch => ({
 
 
 const Main = (props) => {
-  console.log("props of main");
-  console.log(props);
+  // console.log("props of main");
+  // console.log(props);
     const [isImgSelected, setIsImgSelected] =useState(false);
     const [selectedDish, setSelectedDish] = useState("");
     const onDishSelected = (dishId) =>{
@@ -52,8 +52,8 @@ const Main = (props) => {
       
 
     const HomePage = () => {
-      console.log("Home component: props" );
-      console.log(props);
+      // console.log("Home component: props" );
+      // console.log(props);
       return (  
         <Home  dish={props.dishes.dishes.filter((dish) => dish.featured)[0]}
         promotion={props.promotions.filter((promo) => promo.featured)[0]}
@@ -65,8 +65,8 @@ const Main = (props) => {
     }
 
     const DishWithId = ({match}) => {
-      console.log("dish details: props" );
-      console.log(props);
+      // console.log("dish details: props" );
+      // console.log(props);
       return(
           <Dishdetail dish={props.dishes.dishes.filter((dish) => dish.id === parseInt( match.params.dishId,10))[0]} 
             comments={props.comments.filter((comment) => comment.dishId === parseInt( match.params.dishId,10))}

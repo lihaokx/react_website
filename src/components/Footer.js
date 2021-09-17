@@ -13,7 +13,7 @@ function Footer() {
             <div className="row  justify-content-center">  
                 <div className="row row-header  justify-content-center "> 
                     <div className="col-xs-12 col-md">                     
-                            <a className="row  justify-content-center"  target="_blank"  href="https://www.linkedin.com/in/hao-li-654568176/">
+                            <a className="row  justify-content-center"  target="_blank"  rel="noreferrer" href="https://www.linkedin.com/in/hao-li-654568176/">
                                 <div className="col-xs-5 col-md-2 ">
                                     <i className=" fa fa-linkedin  fa-3x"></i>                
                                 </div>
@@ -38,7 +38,7 @@ function Footer() {
 
                 <div className="row row-header  top-buffer justify-content-end ">
                     <div className="col-xs-12 col-md ">                     
-                            <a className="row justify-content-center"  target="_blank"  href="https://github.com/lihaokx">
+                            <a className="row justify-content-center"  target="_blank"  rel="noreferrer" href="https://github.com/lihaokx">
                                 <div className="col-xs-5 col-md-2 ">
                                     <i className=" fa fa-github  fa-3x"></i>                
                                 </div>

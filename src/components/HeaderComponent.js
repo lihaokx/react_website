@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
     Button, Modal, ModalHeader, ModalBody,
@@ -89,7 +89,7 @@ const Header = () => {
 
                             </Nav>
                         
-                            <Nav className="ml-auto" navbar className ="col-md-5 justify-content-end">
+                            <Nav navbar className ="col-md-5 justify-content-end ml-auto">
                                 <NavItem>
                                     <Button outline onClick={toggleModal} className="loginBtn">
                                     <IconContext.Provider value={{ color: "#ffffff", size: "2em", className: "global-class-name" }}>

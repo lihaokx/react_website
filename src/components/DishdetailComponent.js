@@ -1,13 +1,13 @@
 import {useState} from 'react';
 import { Card, CardImg, CardText, CardBody,
-    CardTitle, Breadcrumb, BreadcrumbItem , Modal, Button, ModalHeader, ModalBody,Row, Col, Label,
-    Form, FormGroup, Input  } from 'reactstrap';
+    CardTitle, Breadcrumb, BreadcrumbItem , Modal, Button, ModalHeader, ModalBody,Row, Col, Label 
+     } from 'reactstrap';
   
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { Loading } from './LoadingComponent';
 import { Control, LocalForm, Errors } from 'react-redux-form';
-import reactDom from 'react-dom';
+// import reactDom from 'react-dom';
 
 
 
